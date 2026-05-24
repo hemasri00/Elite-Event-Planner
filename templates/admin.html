@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel | Elite Event Planner</title>
+    
+    <!-- Stylesheets: Bootstrap 5, Icons, FontAwesome, AOS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body id="admin-dashboard-section" class="bg-light">
+
+    <!-- PAGE LOADER -->
+    <div id="loader">
+        <div class="d-flex flex-column align-items-center">
+            <div class="spinner"></div>
+            <h5 class="text-white mt-4 fw-light tracking-wide">Elite Event Planner</h5>
+        </div>
+    </div>
+
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand navbar-brand-custom" href="/">
+                <i class="bi bi-gem"></i> Elite Event <span>Planner</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="/"><i class="bi bi-house"></i> Home</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="/about"><i class="bi bi-info-circle"></i> About Us</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="/services"><i class="bi bi-tools"></i> Services</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="/events"><i class="bi bi-calendar-event"></i> Events</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="/contact"><i class="bi bi-envelope"></i> Contact</a></li>
+                </ul>
+                <ul class="navbar-nav ms-lg-3 border-lg-start ps-lg-3 align-items-center" id="navbar-right-links">
+                    <li class="nav-item"><span class="spinner-border spinner-border-sm text-light" role="status"></span></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- BREADCRUMB HEADER HERO -->
+    <section class="bg-premium-dark text-white text-center py-5 mt-5">
+        <div class="container py-4" data-aos="zoom-in">
+            <h1 class="display-5 fw-bold"><i class="bi bi-shield-lock-fill text-warning"></i> Elite Admin Control Panel</h1>
+            <p class="text-white-50 max-width-600 mx-auto mt-2">Manage customer databases, approve bookings, review statistics, and monitor active revenue flows.</p>
+        </div>
+    </section>
+
+    <!-- ADMIN CONTENT -->
+    <section class="section-padding">
+        <div class="container">
+            
+            <!-- STATS COUNTERS -->
+            <div class="row mb-5">
+                <!-- Total Bookings -->
+                <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="dashboard-stat-card bg-white d-flex align-items-center justify-content-between">
+                        <div>
+                            <span class="text-muted small fw-semibold uppercase tracking-wider">Total Bookings</span>
+                            <h2 class="fw-bold mb-0 mt-1" id="stat-total-bookings">0</h2>
+                        </div>
+                        <div class="stat-icon bg-primary bg-opacity-10 text-primary"><i class="bi bi-calendar-check"></i></div>
+                    </div>
+                </div>
+                <!-- Registered Users -->
+                <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="dashboard-stat-card bg-white d-flex align-items-center justify-content-between" style="border-left-color: #3b82f6;">
+                        <div>
+                            <span class="text-muted small fw-semibold">Registered Clients</span>
+                            <h2 class="fw-bold mb-0 mt-1" id="stat-total-users">0</h2>
+                        </div>
+                        <div class="stat-icon bg-info bg-opacity-10 text-info"><i class="bi bi-people"></i></div>
+                    </div>
+                </div>
+                <!-- Total Confirmed Revenue -->
+                <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="dashboard-stat-card bg-white d-flex align-items-center justify-content-between" style="border-left-color: #10b981;">
+                        <div>
+                            <span class="text-muted small fw-semibold">Confirmed Revenue</span>
+                            <h2 class="fw-bold mb-0 mt-1 text-success" id="stat-total-revenue">$0</h2>
+                        </div>
+                        <div class="stat-icon bg-success bg-opacity-10 text-success"><i class="bi bi-cash-stack"></i></div>
+                    </div>
+                </div>
+                <!-- Pending Bookings -->
+                <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="dashboard-stat-card bg-white d-flex align-items-center justify-content-between" style="border-left-color: #f59e0b;">
+                        <div>
+                            <span class="text-muted small fw-semibold">Pending Requests</span>
+                            <h2 class="fw-bold mb-0 mt-1 text-warning" id="stat-pending-bookings">0</h2>
+                        </div>
+                        <div class="stat-icon bg-warning bg-opacity-10 text-warning"><i class="bi bi-clock-history"></i></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CORE DATA TAB CARDS -->
+            <div class="row">
+                <div class="col-12" data-aos="fade-up" data-aos-delay="150">
+                    
+                    <div class="card border-0 shadow-sm rounded-4 p-4 bg-white">
+                        <ul class="nav nav-pills mb-4" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active rounded-pill px-4" id="pills-bookings-tab" data-bs-toggle="pill" data-bs-target="#pills-bookings" type="button" role="tab"><i class="bi bi-calendar3"></i> Manage Bookings</button>
+                            </li>
+                            <li class="nav-item ms-2" role="presentation">
+                                <button class="nav-link rounded-pill px-4" id="pills-users-tab" data-bs-toggle="pill" data-bs-target="#pills-users" type="button" role="tab"><i class="bi bi-people-fill"></i> Users Database</button>
+                            </li>
+                        </ul>
+                        
+                        <div class="tab-content" id="pills-tabContent">
+                            <!-- Bookings management tab -->
+                            <div class="tab-pane fade show active" id="pills-bookings" role="tabpanel">
+                                <div class="table-responsive">
+                                    <table class="table align-middle mb-0 table-hover">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Client Details</th>
+                                                <th>Occasion</th>
+                                                <th>Date Scheduled</th>
+                                                <th>Venue Location</th>
+                                                <th>Budget</th>
+                                                <th>Status</th>
+                                                <th>Change Status</th>
+                                                <th>Delete</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="admin-bookings-table-body">
+                                            <tr>
+                                                <td colspan="9" class="text-center py-4">
+                                                    <div class="spinner-border text-primary" role="status"></div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                            <!-- Users Database tab -->
+                            <div class="tab-pane fade" id="pills-users" role="tabpanel">
+                                <div class="table-responsive col-lg-8 mx-auto">
+                                    <table class="table align-middle mb-0 table-hover">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>User ID</th>
+                                                <th>Full Name</th>
+                                                <th>Email Address</th>
+                                                <th>Phone Number</th>
+                                                <th>Access Clearance</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="admin-users-table-body">
+                                            <tr>
+                                                <td colspan="5" class="text-center py-4">
+                                                    <div class="spinner-border text-primary" role="status"></div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer-custom">
+        <div class="container">
+            <hr class="border-secondary my-5">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0 text-white-50">&copy; 2026 Elite Event Planner. Administrative Mode.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+    </script>
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/auth.js"></script>
+</body>
+</html>

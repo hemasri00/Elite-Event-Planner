@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Elite Event Planner</title>
+    
+    <!-- Meta tags for premium SEO -->
+    <meta name="description" content="Explore our high-end event planning services: Luxury Decoration, Catering, HD Photography, Stage Design, DJ & Lighting, and E-RSVP Custom Invites.">
+    
+    <!-- Stylesheets: Bootstrap 5, Icons, FontAwesome, AOS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+    <!-- PAGE LOADER -->
+    <div id="loader">
+        <div class="d-flex flex-column align-items-center">
+            <div class="spinner"></div>
+            <h5 class="text-white mt-4 fw-light tracking-wide">Elite Event Planner</h5>
+        </div>
+    </div>
+
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand navbar-brand-custom" href="/">
+                <i class="bi bi-gem"></i> Elite Event <span>Planner</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="/"><i class="bi bi-house"></i> Home</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="/about"><i class="bi bi-info-circle"></i> About Us</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom active" href="/services"><i class="bi bi-tools"></i> Services</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="/events"><i class="bi bi-calendar-event"></i> Events</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="/contact"><i class="bi bi-envelope"></i> Contact</a></li>
+                    <li class="nav-item ms-lg-3"><a class="btn btn-sm btn-elite px-4 py-2" href="/booking"><i class="bi bi-calendar-check"></i> Book Event</a></li>
+                </ul>
+                <ul class="navbar-nav ms-lg-3 border-lg-start ps-lg-3 align-items-center" id="navbar-right-links">
+                    <li class="nav-item"><span class="spinner-border spinner-border-sm text-light" role="status"></span></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- BREADCRUMB HEADER HERO -->
+    <section class="bg-premium-dark text-white text-center py-5 mt-5">
+        <div class="container py-5" data-aos="zoom-in">
+            <h1 class="display-4 fw-bold">Our <span>Premium Services</span></h1>
+            <p class="text-white-50 max-width-600 mx-auto mt-2">Explore our detailed coordination items, custom decor setups, and award-winning culinary options.</p>
+        </div>
+    </section>
+
+    <!-- SERVICES SEARCH & GRID SECTION -->
+    <section class="section-padding bg-light gradient-overlay-section">
+        <div class="container">
+            
+            <!-- SEARCH AND FILTER INTERACTION -->
+            <div class="row justify-content-center mb-5" data-aos="fade-up">
+                <div class="col-md-6 col-lg-5">
+                    <div class="input-group shadow-sm">
+                        <span class="input-group-text bg-white border-0"><i class="bi bi-search text-muted"></i></span>
+                        <input type="text" id="service-search" class="form-control form-control-elite border-0" style="border-radius:0 10px 10px 0 !important;" placeholder="Search services (e.g. decoration, music)...">
+                    </div>
+                </div>
+            </div>
+
+            <!-- DYNAMIC GRID LOADER (Rendered dynamically by main.js) -->
+            <div class="row" id="services-grid">
+                <!-- Fallback loading indicator -->
+                <div class="col-12 text-center py-5">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <p class="mt-2 text-muted">Connecting to NeonDB database...</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- PROMOTIONAL CALL TO ACTION Banner -->
+    <section class="py-5 bg-premium-dark text-white text-center">
+        <div class="container py-4" data-aos="fade-up">
+            <h3 class="fw-bold mb-3">Looking to Customize a Bespoke Layout?</h3>
+            <p class="text-white-50 max-width-700 mx-auto mb-4">Our design coordinators are available to map custom seating, special theme entries, and custom dietary requests to perfectly match your event objectives.</p>
+            <a href="/booking" class="btn btn-elite px-5 fs-5">Secure Your Date Now</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer-custom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <div class="footer-logo"><i class="bi bi-gem"></i> Elite Event Planner</div>
+                    <p class="text-white-50">Crafting stunning visual layouts and luxury services for all events. We coordinate your events so you can completely enjoy your special moments.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-2 mb-4 mb-lg-0 ms-lg-auto">
+                    <h5 class="text-white fw-bold mb-4">Elite Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/" class="footer-link">Home Page</a></li>
+                        <li><a href="/about" class="footer-link">About Us</a></li>
+                        <li><a href="/services" class="footer-link">Our Services</a></li>
+                        <li><a href="/events" class="footer-link">Event Themes</a></li>
+                        <li><a href="/contact" class="footer-link">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
+                    <h5 class="text-white fw-bold mb-4">Contact Info</h5>
+                    <ul class="list-unstyled text-white-50">
+                        <li class="mb-3"><i class="bi bi-geo-alt-fill text-primary me-2"></i> 742 Elite Luxury Avenue, Manhattan, NY</li>
+                        <li class="mb-3"><i class="bi bi-telephone-fill text-primary me-2"></i> +1 (555) 234-9876</li>
+                        <li class="mb-3"><i class="bi bi-envelope-open-fill text-primary me-2"></i> info@eliteeventplanner.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border-secondary my-5">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0 text-white-50">&copy; 2026 Elite Event Planner. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCROLL TO TOP -->
+    <button id="scrollTopBtn" class="scroll-top"><i class="bi bi-chevron-up"></i></button>
+
+    <!-- JavaScripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+    </script>
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/auth.js"></script>
+</body>
+</html>

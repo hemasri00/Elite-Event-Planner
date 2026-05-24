@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Booking | Elite Event Planner</title>
+    
+    <!-- Meta tags for premium SEO -->
+    <meta name="description" content="Secure your event date online with Elite Event Planner. Plan decorations, catering, photography and budget limits.">
+    
+    <!-- Stylesheets: Bootstrap 5, Icons, FontAwesome, AOS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+    <!-- PAGE LOADER -->
+    <div id="loader">
+        <div class="d-flex flex-column align-items-center">
+            <div class="spinner"></div>
+            <h5 class="text-white mt-4 fw-light tracking-wide">Elite Event Planner</h5>
+        </div>
+    </div>
+
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand navbar-brand-custom" href="/">
+                <i class="bi bi-gem"></i> Elite Event <span>Planner</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="/"><i class="bi bi-house"></i> Home</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="/about"><i class="bi bi-info-circle"></i> About Us</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="/services"><i class="bi bi-tools"></i> Services</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="/events"><i class="bi bi-calendar-event"></i> Events</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="/contact"><i class="bi bi-envelope"></i> Contact</a></li>
+                </ul>
+                <ul class="navbar-nav ms-lg-3 border-lg-start ps-lg-3 align-items-center" id="navbar-right-links">
+                    <li class="nav-item"><span class="spinner-border spinner-border-sm text-light" role="status"></span></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- BREADCRUMB HEADER HERO -->
+    <section class="bg-premium-dark text-white text-center py-5 mt-5">
+        <div class="container py-5" data-aos="zoom-in">
+            <h1 class="display-4 fw-bold">Secure Your <span>Date Online</span></h1>
+            <p class="text-white-50 max-width-600 mx-auto mt-2">Fill in your celebration specifications. Our coordination team will process the details instantly.</p>
+        </div>
+    </section>
+
+    <!-- BOOKING FORM SECTION -->
+    <section class="section-padding bg-light gradient-overlay-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8" data-aos="fade-up">
+                    
+                    <div class="glass-panel p-5">
+                        <h3 class="fw-bold mb-4 text-center">Elite <span>Booking Request</span></h3>
+                        <p class="text-muted text-center small mb-5">Please submit detailed information. Fields marked with (*) are required. You can check your request status inside your secure dashboard.</p>
+                        
+                        <form id="bookingForm" novalidate>
+                            <!-- Personal Details Subheading -->
+                            <h5 class="fw-bold text-primary mb-3 border-bottom pb-2"><i class="bi bi-person-badge"></i> Contact Information</h5>
+                            
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="name" class="form-label fw-semibold small text-muted">Customer Full Name *</label>
+                                    <input type="text" id="name" class="form-control form-control-elite" placeholder="e.g. Emma Watson" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label fw-semibold small text-muted">Email Address *</label>
+                                    <input type="email" id="email" class="form-control form-control-elite" placeholder="e.g. emma@gmail.com" required>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="phone" class="form-label fw-semibold small text-muted">Contact Phone Number *</label>
+                                <input type="tel" id="phone" class="form-control form-control-elite" placeholder="e.g. +1 (555) 345-6789" required>
+                            </div>
+                            
+                            <!-- Celebration Details Subheading -->
+                            <h5 class="fw-bold text-primary mb-3 border-bottom pb-2 mt-4"><i class="bi bi-balloon-heart"></i> Celebration Information</h5>
+                            
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="event_type" class="form-label fw-semibold small text-muted">Occasion Category *</label>
+                                    <select id="event_type" class="form-select form-control-elite" required>
+                                        <option value="" disabled selected>Select event type...</option>
+                                        <option value="Wedding / Marriage">Wedding / Marriage</option>
+                                        <option value="Birthday Party">Birthday Party</option>
+                                        <option value="Baby Shower">Baby Shower</option>
+                                        <option value="Cradle Ceremony">Cradle Ceremony</option>
+                                        <option value="Engagement">Engagement</option>
+                                        <option value="Anniversary">Anniversary</option>
+                                        <option value="House Warming">House Warming</option>
+                                        <option value="Corporate Events">Corporate Events</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="event_date" class="form-label fw-semibold small text-muted">Event Date Scheduled *</label>
+                                    <input type="date" id="event_date" class="form-control form-control-elite" required>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="guests" class="form-label fw-semibold small text-muted">Estimated Guests Count *</label>
+                                    <input type="number" id="guests" min="1" class="form-control form-control-elite" placeholder="e.g. 150" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="budget" class="form-label fw-semibold small text-muted">Estimated Budget ($) *</label>
+                                    <input type="number" id="budget" min="100" class="form-control form-control-elite" placeholder="e.g. 5000" required>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="venue" class="form-label fw-semibold small text-muted">Venue Destination *</label>
+                                <input type="text" id="venue" class="form-control form-control-elite" placeholder="e.g. Grand Plaza Resort, Manhattan or Home" required>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="requirements" class="form-label fw-semibold small text-muted">Additional Requirements / Special Notes</label>
+                                <textarea id="requirements" rows="4" class="form-control form-control-elite" placeholder="Mention theme colors, special catering dietary restrictions, stage specifications..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-elite w-100 fs-5 mt-3 py-2">Submit Secure Booking <i class="bi bi-calendar-plus ms-2"></i></button>
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUCCESS POPUP MODAL -->
+    <div class="modal fade" id="bookingSuccessModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="bookingSuccessModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow bg-premium-dark text-white text-center p-5 rounded-4">
+                <div class="modal-body">
+                    <i class="bi bi-check-circle-fill text-success display-1 mb-4 d-block"></i>
+                    <h3 class="fw-bold mb-3">Booking Submitted Successfully!</h3>
+                    <p class="text-white-50 mb-4">Your celebration slot has been registered. An automated detailed email notification has been dispatched to our event administrator.</p>
+                    <p class="small text-muted mb-0">Redirecting you to dashboard...</p>
+                    <div class="spinner-border spinner-border-sm text-primary mt-3" role="status"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer-custom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <div class="footer-logo"><i class="bi bi-gem"></i> Elite Event Planner</div>
+                    <p class="text-white-50">Crafting stunning visual layouts and luxury services for all events. We coordinate your events so you can completely enjoy your special moments.</p>
+                </div>
+            </div>
+            <hr class="border-secondary my-5">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0 text-white-50">&copy; 2026 Elite Event Planner. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCROLL TO TOP -->
+    <button id="scrollTopBtn" class="scroll-top"><i class="bi bi-chevron-up"></i></button>
+
+    <!-- JavaScripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+        
+        // Prevent event dates in the past
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('event_date').setAttribute('min', today);
+    </script>
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/auth.js"></script>
+</body>
+</html>

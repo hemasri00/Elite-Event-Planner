@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: elite-event-planner-backend
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: FLASK_ENV
+        value: production
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DATABASE_URL
+        sync: false # User enters this manually in Render UI (NeonDB connection)
+      - key: MAIL_SERVER
+        value: smtp.gmail.com
+      - key: MAIL_PORT
+        value: "587"
+      - key: MAIL_USE_TLS
+        value: "True"
+      - key: MAIL_USERNAME
+        sync: false # User enters this manually (Gmail username)
+      - key: MAIL_PASSWORD
+        sync: false # User enters this manually (Gmail App Specific Password)
+      - key: ADMIN_EMAIL
+        sync: false # User enters this manually (Admin receiver email)

@@ -1,0 +1,30 @@
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv/
+bin/
+lib/
+include/
+
+# Python Cache & Compiled Files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Databases & Environments
+instance/
+.env
+.env.local
+elite_event_planner.db
+*.db
+*.sqlite
+
+# IDEs & System Files
+.vscode/
+.idea/
+Thumbs.db
+ehthumbs.db
+Desktop.ini

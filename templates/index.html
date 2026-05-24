@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Event Planner | Curating Moments of Splendor</title>
+    
+    <!-- Meta tags for premium SEO -->
+    <meta name="description" content="Elite Event Planner organizes top-tier luxury weddings, birthday parties, baby showers, engagements, corporate events, and traditional ceremonies with breathtaking custom decorations.">
+    <meta name="keywords" content="Event Planner, Wedding organizer, Luxury Catering, Stage Decoration, DJ Music, Anniversary planner">
+    <meta name="author" content="Elite Event Planner">
+    
+    <!-- Stylesheets: Bootstrap 5, Icons, FontAwesome, AOS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+    <!-- PAGE LOADER -->
+    <div id="loader">
+        <div class="d-flex flex-column align-items-center">
+            <div class="spinner"></div>
+            <h5 class="text-white mt-4 fw-light tracking-wide">Elite Event Planner</h5>
+            <span class="text-muted small">Designing Your Moments...</span>
+        </div>
+    </div>
+
+    <!-- GLASSMORPHIC NAVIGATION BAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand navbar-brand-custom" href="/">
+                <i class="bi bi-gem"></i> Elite Event <span>Planner</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom active" href="/"><i class="bi bi-house"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom" href="/about"><i class="bi bi-info-circle"></i> About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom" href="/services"><i class="bi bi-tools"></i> Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom" href="/events"><i class="bi bi-calendar-event"></i> Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom" href="/contact"><i class="bi bi-envelope"></i> Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-sm btn-elite px-4 py-2" href="/booking"><i class="bi bi-calendar-check"></i> Book Event</a>
+                    </li>
+                </ul>
+                
+                <!-- Dynamic Auth Section injected by auth.js -->
+                <ul class="navbar-nav ms-lg-3 border-lg-start ps-lg-3 align-items-center" id="navbar-right-links">
+                    <li class="nav-item">
+                        <span class="spinner-border spinner-border-sm text-light" role="status"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- FULL SCREEN HERO SLIDER -->
+    <section class="hero-slider-container">
+        <!-- Slide 1 -->
+        <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1920&q=80');"></div>
+        <!-- Slide 2 -->
+        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1920&q=80');"></div>
+        <!-- Slide 3 -->
+        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1464349153735-7db50ed83c84?auto=format&fit=crop&w=1920&q=80');"></div>
+        
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content-wrapper">
+            <div class="container text-center" data-aos="zoom-in" data-aos-duration="1000">
+                <h1 class="hero-title">Crafting <span>Extraordinary</span> Celebrations</h1>
+                <p class="hero-subtitle">Elite Event Planner brings your dream occasions to life with breathtaking setups, curated catering, premium music layouts, and custom decorative grandeur.</p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <a href="/booking" class="btn btn-elite fs-5 px-5"><i class="bi bi-calendar2-heart"></i> Start Booking</a>
+                    <a href="/services" class="btn btn-elite-outline fs-5 px-5"><i class="bi bi-stars"></i> Explore Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- POPULAR SERVICES PREVIEW -->
+    <section class="section-padding bg-light gradient-overlay-section">
+        <div class="container">
+            <div class="row section-title-wrapper text-center">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-title">Premium <span>Services</span></h2>
+                    <p class="text-muted mt-2">Delivering perfection across every facet of your event coordination.</p>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Decoration Card -->
+                <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card card-elite h-100">
+                        <div class="card-elite-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=800&q=80" class="card-elite-img" alt="Decoration">
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <h5 class="fw-bold">Luxury Decoration</h5>
+                            <p class="text-muted small flex-grow-1">Bespoke thematic backdrops, rich floral ceiling layouts, and artistic ambient configurations.</p>
+                            <a href="/services" class="text-primary fw-semibold small mt-3">Discover details <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Catering Card -->
+                <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card card-elite h-100">
+                        <div class="card-elite-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=800&q=80" class="card-elite-img" alt="Catering">
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <h5 class="fw-bold">Gourmet Catering</h5>
+                            <p class="text-muted small flex-grow-1">Decadent multi-course banquets, customized desserts, and master chef delicacies.</p>
+                            <a href="/services" class="text-primary fw-semibold small mt-3">Discover details <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Photography Card -->
+                <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card card-elite h-100">
+                        <div class="card-elite-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=800&q=80" class="card-elite-img" alt="Photography">
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <h5 class="fw-bold">Cinematic Photography</h5>
+                            <p class="text-muted small flex-grow-1">Ultra-HD coverage, standard family portraits, candid photography, and cinematic videos.</p>
+                            <a href="/services" class="text-primary fw-semibold small mt-3">Discover details <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- DJ and Music Card -->
+                <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card card-elite h-100">
+                        <div class="card-elite-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=80" class="card-elite-img" alt="DJ Music">
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <h5 class="fw-bold">Elite DJ & Sounds</h5>
+                            <p class="text-muted small flex-grow-1">Top sound systems, custom laser stages, dynamic DJs, and standard acoustics.</p>
+                            <a href="/services" class="text-primary fw-semibold small mt-3">Discover details <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="/services" class="btn btn-elite px-5">View All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- EVENT CATEGORIES PROMPT -->
+    <section class="section-padding bg-premium-dark position-relative">
+        <div class="container">
+            <div class="row section-title-wrapper text-center">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-title text-white">Event <span>Categories</span></h2>
+                    <p class="text-light-50 mt-2">Delivering magnificent events custom-tailored to suit all occasions.</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <!-- Wedding -->
+                <div class="col-md-6 col-lg-3 mb-4" data-aos="flip-left" data-aos-delay="100">
+                    <div class="card card-elite bg-dark text-white border-0 overflow-hidden h-100">
+                        <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=800&q=80" class="card-img opacity-75 h-100" style="object-fit:cover; min-height:300px;" alt="Weddings">
+                        <div class="card-img-overlay d-flex flex-column justify-content-end bg-gradient-dark p-4">
+                            <h4 class="fw-bold">Wedding Ceremony</h4>
+                            <p class="small text-white-50">Royal, magnificent, and breathtaking grand wedding services.</p>
+                            <a href="/booking?type=Wedding" class="btn btn-sm btn-elite mt-2 align-self-start">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Birthdays -->
+                <div class="col-md-6 col-lg-3 mb-4" data-aos="flip-left" data-aos-delay="200">
+                    <div class="card card-elite bg-dark text-white border-0 overflow-hidden h-100">
+                        <img src="https://images.unsplash.com/photo-1464349153735-7db50ed83c84?auto=format&fit=crop&w=800&q=80" class="card-img opacity-75 h-100" style="object-fit:cover; min-height:300px;" alt="Birthdays">
+                        <div class="card-img-overlay d-flex flex-column justify-content-end bg-gradient-dark p-4">
+                            <h4 class="fw-bold">Birthday Bashes</h4>
+                            <p class="small text-white-50">Vibrant balloons, interactive magicians, and lovely cake stages.</p>
+                            <a href="/booking?type=Birthday" class="btn btn-sm btn-elite mt-2 align-self-start">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Corporate -->
+                <div class="col-md-6 col-lg-3 mb-4" data-aos="flip-left" data-aos-delay="300">
+                    <div class="card card-elite bg-dark text-white border-0 overflow-hidden h-100">
+                        <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80" class="card-img opacity-75 h-100" style="object-fit:cover; min-height:300px;" alt="Corporate">
+                        <div class="card-img-overlay d-flex flex-column justify-content-end bg-gradient-dark p-4">
+                            <h4 class="fw-bold">Corporate Galas</h4>
+                            <p class="small text-white-50">Sleek presentations, high-definition stage sound, and catering.</p>
+                            <a href="/booking?type=Corporate" class="btn btn-sm btn-elite mt-2 align-self-start">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Baby Shower -->
+                <div class="col-md-6 col-lg-3 mb-4" data-aos="flip-left" data-aos-delay="400">
+                    <div class="card card-elite bg-dark text-white border-0 overflow-hidden h-100">
+                        <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=800&q=80" class="card-img opacity-75 h-100" style="object-fit:cover; min-height:300px;" alt="Baby Shower">
+                        <div class="card-img-overlay d-flex flex-column justify-content-end bg-gradient-dark p-4">
+                            <h4 class="fw-bold">Baby Showers</h4>
+                            <p class="small text-white-50">Lovely, warm pastel-toned setups to celebrate incoming joy.</p>
+                            <a href="/booking?type=Baby%20Shower" class="btn btn-sm btn-elite mt-2 align-self-start">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="/events" class="btn btn-elite-outline px-5">View All Event Types</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS CAROUSEL -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="row section-title-wrapper text-center">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-title">Client <span>Testimonials</span></h2>
+                    <p class="text-muted mt-2">What families and companies say about their Elite experiences.</p>
+                </div>
+            </div>
+            
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="testimonial-card">
+                                    <span class="testimonial-quote">“</span>
+                                    <p class="testimonial-text">"Elite Event Planner turned our wedding into an absolute fairy tale! The floral arrangements, spectacular main stage decoration, and delicious catering left all our guests completely awestruck. Professional coordination from start to finish!"</p>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80" class="testimonial-author-img" alt="Sophia Sen">
+                                        <div>
+                                            <h5 class="mb-0 fw-bold">Sophia Sen</h5>
+                                            <small class="text-muted">Bridal Client, New York</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="testimonial-card">
+                                    <span class="testimonial-quote">“</span>
+                                    <p class="testimonial-text">"For our corporate anniversary gala, we wanted high-quality acoustics and professional layout. Elite Event Planner handled the laser stage, the executive buffet tables, and HD video projection perfectly. Outstanding!"</p>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80" class="testimonial-author-img" alt="David Miller">
+                                        <div>
+                                            <h5 class="mb-0 fw-bold">David Miller</h5>
+                                            <small class="text-muted">Marketing Director, TechCorp</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHOTO GALLERY PORTFOLIO -->
+    <section class="section-padding bg-white">
+        <div class="container">
+            <div class="row section-title-wrapper text-center">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-title">Elite <span>Gallery</span></h2>
+                    <p class="text-muted mt-2">Glimpses of luxury decorations and colorful memories we've shaped.</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" class="gallery-img" alt="Gallery Wedding">
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=800&q=80" class="gallery-img" alt="Gallery Decor">
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1464349153735-7db50ed83c84?auto=format&fit=crop&w=800&q=80" class="gallery-img" alt="Gallery Birthday">
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80" class="gallery-img" alt="Gallery Stage">
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=800&q=80" class="gallery-img" alt="Gallery Food">
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?auto=format&fit=crop&w=800&q=80" class="gallery-img" alt="Gallery Floral">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="row section-title-wrapper text-center">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+                    <p class="text-muted mt-2">Answers to key queries regarding our elite event management.</p>
+                </div>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item mb-3 border-0 shadow-sm rounded">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button fw-bold rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true">
+                                    How far in advance should we secure a booking?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-muted bg-white rounded-bottom">
+                                    We highly recommend reserving your date at least 3 to 6 months in advance for standard events, and 6 to 12 months in advance for large-scale weddings and major corporate galas to ensure perfect stage design and catering allocations.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3 border-0 shadow-sm rounded">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed fw-bold rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                    Can we customize the decorations and buffet menus?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-muted bg-white rounded-bottom">
+                                    Absolutely! Everything we build is customized. During our initial consultation, our decorators design detailed themes matching your aesthetic preferences, and our premium chef panel works with you to curate mouth-watering multi-cuisine menus.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3 border-0 shadow-sm rounded">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed fw-bold rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                    Are there any hidden costs in the price estimates?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-muted bg-white rounded-bottom">
+                                    No. Elite Event Planner prides itself on full transparency. All estimates, floral materials, equipment installations, labor, and cleaning costs are detailed clearly in our quotes before you finalize the booking.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREMIUM DARK FOOTER -->
+    <footer class="footer-custom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <div class="footer-logo"><i class="bi bi-gem"></i> Elite Event Planner</div>
+                    <p class="text-white-50">Crafting stunning visual layouts and luxury services for all events. We coordinate your events so you can completely enjoy your special moments.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-2 mb-4 mb-lg-0 ms-lg-auto">
+                    <h5 class="text-white fw-bold mb-4">Elite Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/" class="footer-link">Home Page</a></li>
+                        <li><a href="/about" class="footer-link">About Us</a></li>
+                        <li><a href="/services" class="footer-link">Our Services</a></li>
+                        <li><a href="/events" class="footer-link">Event Themes</a></li>
+                        <li><a href="/contact" class="footer-link">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
+                    <h5 class="text-white fw-bold mb-4">Contact Info</h5>
+                    <ul class="list-unstyled text-white-50">
+                        <li class="mb-3"><i class="bi bi-geo-alt-fill text-primary me-2"></i> 742 Elite Luxury Avenue, Manhattan, NY</li>
+                        <li class="mb-3"><i class="bi bi-telephone-fill text-primary me-2"></i> +1 (555) 234-9876</li>
+                        <li class="mb-3"><i class="bi bi-envelope-open-fill text-primary me-2"></i> info@eliteeventplanner.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border-secondary my-5">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0 text-white-50">&copy; 2026 Elite Event Planner. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                    <a href="#" class="text-white-50 me-3 small">Terms of Service</a>
+                    <a href="#" class="text-white-50 small">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCROLL TO TOP -->
+    <button id="scrollTopBtn" class="scroll-top"><i class="bi bi-chevron-up"></i></button>
+
+    <!-- JavaScripts: Bootstrap 5, AOS, custom files -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            easing: 'ease-in-out'
+        });
+    </script>
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/auth.js"></script>
+</body>
+</html>
