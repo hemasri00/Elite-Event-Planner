@@ -12,7 +12,7 @@ const isLocalHost = window.location.hostname === 'localhost' ||
 
 const AUTH_API_BASE = isLocalHost 
     ? '' 
-    : (window.location.protocol === 'file:' ? 'http://127.0.0.1:5000' : 'https://elite-event-planner.onrender.com');
+    : (window.location.protocol === 'file:' ? 'http://127.0.0.1:5000' : 'https://hemasri00.pythonanywhere.com');
 
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Session verification check on every page
